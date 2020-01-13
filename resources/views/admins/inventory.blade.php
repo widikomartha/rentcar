@@ -32,14 +32,100 @@
                                     
                                     <div class="md-modal md-effect-5" id="modal-5">
                                         <div class="md-content">
-                                            <h3>Modal Dialog</h3>
+                                            <h3>Add Car</h3>
                                             <div>
-                                                <p>This is a modal window. You can do the following things with it:</p>
-                                                <ul>
-                                                    <li><strong>Read:</strong> modal windows will probably tell you something important so don't forget to read what they say.</li>
-                                                    <li><strong>Look:</strong> a modal window enjoys a certain kind of attention; just look at it and appreciate its presence.</li>
-                                                    <li><strong>Close:</strong> click on the button below to close the modal.</li>
-                                                </ul>
+                                                <form>
+                                                    <div class="row">
+                                                        <label class="col-sm-4 col-lg-2 col-form-label">Normal Text</label>
+                                                        <div class="col-sm-8 col-lg-10">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="icofont icofont-ui-volume"></i></span>
+                                                                <input type="text" class="form-control" placeholder="Normal Text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="col-sm-4 col-lg-2 col-form-label">Bold Text</label>
+                                                        <div class="col-sm-8 col-lg-10">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="icofont icofont-queen"></i></span>
+                                                                <input type="text" class="form-control form-control-bold" placeholder=".form-control-bold">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="col-sm-4 col-lg-2 col-form-label">Capitalize Text</label>
+                                                        <div class="col-sm-8 col-lg-10">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="icofont icofont-presentation"></i></span>
+                                                                <input type="text" class="form-control form-control-capitalize" placeholder=".form-control-capitalize">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="col-sm-4 col-lg-2 col-form-label">Uppercase Text</label>
+                                                        <div class="col-sm-8 col-lg-10">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="icofont icofont-wifi"></i></span>
+                                                                <input type="text" class="form-control form-control-uppercase" placeholder=".form-control-uppercase">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="col-sm-4 col-lg-2 col-form-label">Lowercase Text</label>
+                                                        <div class="col-sm-8 col-lg-10">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="icofont icofont-shield"></i></span>
+                                                                <input type="text" class="form-control form-control-lowercase" placeholder=".form-control-lowercase">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="col-sm-4 col-lg-2 col-form-label">Varient Text</label>
+                                                        <div class="col-sm-8 col-lg-10">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="icofont icofont-ui-volume"></i></span>
+                                                                <input type="text" class="form-control form-control-variant" placeholder=".form-control-variant">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="col-sm-4 col-lg-2 col-form-label">Left-Align Text</label>
+                                                        <div class="col-sm-8 col-lg-10">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="icofont icofont-presentation"></i></span>
+                                                                <input type="text" class="form-control form-control-left" placeholder=".form-control-left">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="col-sm-4 col-lg-2 col-form-label">Center-Align Text</label>
+                                                        <div class="col-sm-8 col-lg-10">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="icofont icofont-queen"></i></span>
+                                                                <input type="text" class="form-control form-control-center" placeholder=".form-control-center">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="col-sm-4 col-lg-2 col-form-label">Right-Align Text</label>
+                                                        <div class="col-sm-8 col-lg-10">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="icofont icofont-shield"></i></span>
+                                                                <input type="text" class="form-control form-control-right" placeholder=".form-control-right">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <label class="col-sm-4 col-lg-2 col-form-label">RTL Text</label>
+                                                        <div class="col-sm-8 col-lg-10">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon"><i class="icofont icofont-ui-volume"></i></span>
+                                                                <input type="text" class="form-control form-control-rtl" placeholder=".form-control-rtl">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
                                                 <button type="button" class="btn btn-primary waves-effect md-close">Close</button>
                                             </div>
                                         </div>
