@@ -33,6 +33,9 @@
     </div>
 
     <div class="wrap-input100 validate-input" data-validate = "Password is required">
+        <span class="btn-show-pass">
+            <i class="fa fa-eye"></i>
+        </span>
         <input class="input100" type="password" name="pass" placeholder="Password">
         <span class="focus-input100"></span>
         <span class="symbol-input100">
@@ -41,6 +44,9 @@
     </div>
 
     <div class="wrap-input100 validate-input" data-validate = "Password is required">
+        <span class="btn-show-pass">
+            <i class="fa fa-eye"></i>
+        </span>
         <input class="input100" type="password" name="pass" placeholder="Re-Password">
         <span class="focus-input100"></span>
         <span class="symbol-input100">
@@ -54,7 +60,18 @@
         </button>
     </div>
 
-    <div class="text-center p-t-50">
+    <div class="text-center p-t-12">
+        <span class="txt1">
+            or with your social media
+        </span>
+    </div>
+
+    <div class="social-media text-center">
+        <img src="{{asset('assets/login-template\facebook.png')}}" alt="IMG">
+        <img src="{{asset('assets/login-template\google.png')}}" alt="IMG">
+    </div>
+
+    <div class="text-center p-t-30">
         <a class="txt2" href="{{route('signin') }}">
             Already have an account? <b>Sign In</b>
             <i class="fa fa-long-arrow-left m-l-5" aria-hidden="true"></i>

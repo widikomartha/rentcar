@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Docar - @yield('title')</title>
+	<title>DoCar - @yield('title')</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -25,11 +25,13 @@
 
 </head>
 <body>
+    <!-- Canvas for particles animation -->
+    <div id="particles-js"></div>
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic js-tilt" data-tilt>
-					<img src="{{asset('assets/login-template/img-01.png')}}" alt="IMG">
+                    <a href="{{route('home') }}"><img src="{{asset('assets/pages-template\corporate\img\logos\docar logo.png')}}" alt="IMG"></a>
 				</div>
 				@yield('content')
 			</div>
@@ -45,12 +47,16 @@
     <script type="text/javascript" src="{{ asset('assets/login-template/vendor/select2/select2.min.js') }}"></script>
 <!--===============================================================================================-->
     <script type="text/javascript" src="{{ asset('assets/login-template/vendor/tilt/tilt.jquery.min.js') }}"></script>
+    <!-- Particles effect plugin on the right -->
+    <script type="text/javascript" src="{{ asset('assets/admin-template/extra-pages\comming-soon\js\particles.js') }}"></script>
+    
+<!--===============================================================================================-->
+    <script type="text/javascript" src="{{ asset('assets/login-template/js/main.js') }}"></script>
+
     <script >
         $('.js-tilt').tilt({
             scale: 1.1
         })
     </script>
-<!--===============================================================================================-->
-    <script type="text/javascript" src="{{ asset('assets/login-template/js/main.js') }}"></script>
 </body>
 </html>
