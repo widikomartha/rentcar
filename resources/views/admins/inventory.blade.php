@@ -32,7 +32,7 @@
                                     
                                     <div class="md-modal md-effect-5" id="modal-5">
                                         <div class="md-content">
-                                            <h3>Modal Dialog</h3>
+                                            <h3>Add Car</h3>
                                             <div>
                                                 <p>This is a modal window. You can do the following things with it:</p>
                                                 <ul>
