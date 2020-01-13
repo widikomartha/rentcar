@@ -71,60 +71,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <label class="col-sm-4 col-lg-2 col-form-label">Lowercase Text</label>
-                                                        <div class="col-sm-8 col-lg-10">
-                                                            <div class="input-group">
-                                                                <span class="input-group-addon"><i class="icofont icofont-shield"></i></span>
-                                                                <input type="text" class="form-control form-control-lowercase" placeholder=".form-control-lowercase">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <label class="col-sm-4 col-lg-2 col-form-label">Varient Text</label>
-                                                        <div class="col-sm-8 col-lg-10">
-                                                            <div class="input-group">
-                                                                <span class="input-group-addon"><i class="icofont icofont-ui-volume"></i></span>
-                                                                <input type="text" class="form-control form-control-variant" placeholder=".form-control-variant">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <label class="col-sm-4 col-lg-2 col-form-label">Left-Align Text</label>
-                                                        <div class="col-sm-8 col-lg-10">
-                                                            <div class="input-group">
-                                                                <span class="input-group-addon"><i class="icofont icofont-presentation"></i></span>
-                                                                <input type="text" class="form-control form-control-left" placeholder=".form-control-left">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <label class="col-sm-4 col-lg-2 col-form-label">Center-Align Text</label>
-                                                        <div class="col-sm-8 col-lg-10">
-                                                            <div class="input-group">
-                                                                <span class="input-group-addon"><i class="icofont icofont-queen"></i></span>
-                                                                <input type="text" class="form-control form-control-center" placeholder=".form-control-center">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <label class="col-sm-4 col-lg-2 col-form-label">Right-Align Text</label>
-                                                        <div class="col-sm-8 col-lg-10">
-                                                            <div class="input-group">
-                                                                <span class="input-group-addon"><i class="icofont icofont-shield"></i></span>
-                                                                <input type="text" class="form-control form-control-right" placeholder=".form-control-right">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <label class="col-sm-4 col-lg-2 col-form-label">RTL Text</label>
-                                                        <div class="col-sm-8 col-lg-10">
-                                                            <div class="input-group">
-                                                                <span class="input-group-addon"><i class="icofont icofont-ui-volume"></i></span>
-                                                                <input type="text" class="form-control form-control-rtl" placeholder=".form-control-rtl">
-                                                            </div>
-                                                        </div>
-                                                    </div>
                                                 </form>
                                                 <button type="button" class="btn btn-primary waves-effect md-close">Close</button>
                                             </div>
