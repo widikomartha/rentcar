@@ -19,4 +19,11 @@ class PagesController extends Controller
     {
         return view('pages.car_list');
     }
+
+    //ABOUTS US
+
+    public  function abouts()
+    {
+        return view('pages.abouts');
+    }
 }

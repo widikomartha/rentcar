@@ -25,7 +25,7 @@
                                 <span class="color-red-v2">Sewa Mobil</span></h2><br/> 
                                 <h2 style="font-size:40px; color:#fff;" data-animation="animated fadeInUp">Tanpa Ribet <br></h2>
                                 <h2 style="font-size:40px; color:#fff; margin-left:50px;" data-animation="animated fadeInUp">Tanpa Ribut <br></h2>
-                                <h2 style="font-size:40px; color:#fff; margin-left:100px;" data-animation="animated fadeInUp">Tanpa Rabat <br></h2>
+                                <h2 style="font-size:40px; color:#fff; margin-left:100px;" data-animation="animated fadeInUp">Dapat Rabat <br></h2>
                         </div>
                     </div>
                 </div>
@@ -134,10 +134,15 @@
           <!-- END CONTENT -->
         </div>
 
-        <div class="row margin-bottom-40 ">
           <!-- BEGIN CONTENT -->
-          <h1 class="text-center margin-bottom-40">Mengapa Sewa Mobil melalui <b class="text-orange">DoCar Bali</b></h1>
-            <div class="col-md-3 text-center">
+        <div class="text-center row margin-bottom-40">
+          <div class="col-md">
+            <h1>Mengapa Sewa Mobil melalui <b class="text-orange">DoCar Bali</b></h1>
+          </div>
+        </div>
+
+        <div class="row margin-bottom-40">
+          <div class="col-md-3 text-center">
               <h3>Mudah & <b class="text-orange">Fleksibel</b></h3>
               Anda hanya butuh 3 tahap untuk dapat menyewa mobil serta dapat melakukannya di mana saja dan kapan saja dengan bantuan aplikasi DOcar.
             </div>
@@ -153,8 +158,9 @@
               <h3>Sesuai <b class="text-orange">Pilihan</b></h3>
               Docar menjamin Anda mendapatkan mobil sesuai pilihan Anda dengan memberikan informasi terinci mengenai mobil yang akan Anda pesan.
             </div>
-          <!-- END CONTENT -->
         </div>
+            
+          <!-- END CONTENT -->
 
         <div class="row margin-bottom-40">
           <!-- BEGIN SALE PRODUCT -->

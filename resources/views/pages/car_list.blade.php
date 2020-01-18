@@ -14,28 +14,32 @@
     <div class="row margin-bottom-40">
         <!-- BEGIN SIDEBAR -->
         <div class="sidebar col-md-3 col-sm-5">
-        <div class="sidebar-filter margin-bottom-25">
-            <h2 class="text-warning">Filter Pencarian</h2>
+            <div class="sidebar-filter margin-bottom-25">
+                <h2 class="text-warning">Filter Pencarian</h2>
 
-            <h3>Kisaran Harga</h3>
-            <div class="margin-bottom-10" id="slider-range"></div>
-            <input class="text-center" type="text" id="amount" style="border:0; color:#f6931f; font-weight:bold;">
-        </div>
-
-        <div class="sidebar-products clearfix">
-            <h2>Bestsellers</h2>
-            <?php 
-                for ($i = 1; $i <= 10; $i++):
-            ?>
-            <div class="item">
-            <a href="shop-item.html"><img src="{{asset('assets/pages-template/pages/img/products/avanza.jpg')}}" alt="Some Shoes in Animal with Cut Out"></a>
-            <h3><a href="shop-item.html">Toyota Avanza</a></h3>
-            <div class="price">$31.00</div>
+                <h3>Kisaran Harga</h3>
+                <div class="margin-bottom-10" id="slider-range"></div>
+                <div class="row">
+                    <input class="col-md-6 text-center" disabled type="text" id="minPrice" style="border:0; color:#f6931f; font-weight:bold;">
+                    <input class="col-md-6 text-center" disabled type="text" id="maxPrice" style="border:0; color:#f6931f; font-weight:bold;">
+                </div>
+                
             </div>
-            <?php
-                endfor;
-            ?>
-        </div>
+
+            <div class="sidebar-products clearfix">
+                <h2>Bestsellers</h2>
+                <?php 
+                    for ($i = 1; $i <= 10; $i++):
+                ?>
+                <div class="item">
+                <a href="shop-item.html"><img src="{{asset('assets/pages-template/pages/img/products/avanza.jpg')}}" alt="Some Shoes in Animal with Cut Out"></a>
+                <h3><a href="shop-item.html">Toyota Avanza</a></h3>
+                <div class="price">$31.00</div>
+                </div>
+                <?php
+                    endfor;
+                ?>
+            </div>
         </div>
         <!-- END SIDEBAR -->
         <!-- BEGIN CONTENT -->
@@ -133,11 +137,11 @@
 
 <script type="text/javascript">
     $(function () {
-        $( "#slider-range" ).slider({
+        /*$( "#slider-range" ).slider({
             range:true,
-            min: 2000,
-            max: 600000,
-            values: [ 20000, 50000 ],
+            min: 200000,
+            max: 900000,
+            values: [ 20000, 500000 ],
             slide: function( event, ui ) {
                 $( "#amount" ).val( "Rp " + ui.values[ 0 ] + " - Rp " + ui.values[ 1 ] );
             }
@@ -145,9 +149,36 @@
         $( "#amount" ).val( "Rp " + $( "#slider-range" ).slider( "values", 0 ) +
             " - Rp " + $( "#slider-range" ).slider( "values", 1 ) );
             
-    });
-    $(document).ready(function(){
-        $('#amount').autoNumeric('init');
+            $('.money').simpleMoneyFormat();*/
+        
+            $("#slider-range").slider({
+                range: true,
+                min: 200000,
+                max: 900000,
+                step: 50000,
+                values: [20000, 900000],
+                slide: function (event, ui) {
+                    $("#minPrice").val("Rp " + addCommas(ui.values[0].toString()));
+                    $("#maxPrice").val("Rp " + addCommas(ui.values[1]));
+                }
+            });
+
+            $("#minPrice").val("Rp " + addCommas($("#slider-range").slider("values", 0)));
+            $("#maxPrice").val("Rp " + addCommas($("#slider-range").slider("values", 1)));
+
+            function addCommas(nStr)
+            {
+                nStr += '';
+                x = nStr.split('.');
+                x1 = x[0];
+                x2 = x.length > 1 ? '.' + x[1] : '';
+                var rgx = /(\d+)(\d{3})/;
+                while (rgx.test(x1)) {
+                    x1 = x1.replace(rgx, '$1' + '.' + '$2');
+                }
+                return x1 + x2;
+            }
+
     });
 </script>
 

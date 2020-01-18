@@ -41,3 +41,4 @@ Route::get('admin/inventory', 'AdminController@inventory')->name('inventory');
 */
 Route::get('index', 'PagesController@index')->name('home');
 Route::get('car_list', 'PagesController@car_list')->name('car_list');
+Route::get('abouts', 'PagesController@abouts')->name('abouts');

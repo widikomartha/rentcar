@@ -4,7 +4,7 @@ a,
 a:focus,
 a:hover,
 a:active {
-    outline: ;
+    outline: none ;
 }
 
 /*Fix for Firefox*/

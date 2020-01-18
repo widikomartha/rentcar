@@ -1,1 +1,17 @@
 /* here you can put your own css to customize and override the theme */
+@font-face {
+    font-family: "Pacifico";
+    src: url(http://localhost:8000/assets/fonts/Pacifico.ttf);
+ }
+
+.bg-grey{
+	background-color: rgb(240, 240, 240);
+}
+.goods-data p {
+	text-indent: 4.5em;
+	font-size: 14px;
+}
+.goods-data h3 {
+    font-size: 16px;
+    font-weight: bolder;
+}

@@ -20,7 +20,7 @@
             <li class="{{ Request::path() == 'car_list' ? 'active' : '' }}"><a href="{{route('car_list') }}">Car List</a></li>
             <li><a href="javascript:;">Tour Packages</a></li>
             <li><a href="javascript:;">Contact Us</a></li>
-            <li><a href="javascript:;">About Us</a></li>
+            <li class="{{ Request::path() == 'abouts' ? 'active' : '' }}"><a href="{{route('abouts') }}">About Us</a></li>
             
 
             <!-- BEGIN TOP SEARCH -->
