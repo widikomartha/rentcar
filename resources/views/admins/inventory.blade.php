@@ -97,7 +97,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach ($car as $car)
+                                        @foreach ($cars as $car)
                                             
                                             <tr>
                                                 <td class="align-middle">1</td>

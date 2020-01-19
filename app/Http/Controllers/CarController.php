@@ -15,7 +15,8 @@ class CarController extends Controller
     public function index()
     {
         $car = Car::all();
-        return view('admins.inventory')->with($car);
+        dump($car);
+        return view('admins.inventory', ['cars' => $car]);
     }
 
     /**
