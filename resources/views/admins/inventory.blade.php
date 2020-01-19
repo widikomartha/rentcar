@@ -97,9 +97,8 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php 
-                                            for ($i = 1; $i <= 15; $i++):
-                                        ?>
+                                        @foreach ($car as $car)
+                                            
                                             <tr>
                                                 <td class="align-middle">1</td>
                                                 <td class="align-middle"><img style="width:200px" src="{{asset('assets/admin-template/images\mobil.png')}}" alt="MOBIL"></td>
@@ -114,9 +113,8 @@
                                                     <i class="feather icon-trash-2 fa-lg" data-toggle="tooltip" data-placement="left" title="Delete"> </i>
                                                 </td>
                                             </tr>
-                                            <?php
-                                                endfor;
-                                            ?>
+                                        @endforeach
+                                        
                                         </tbody>
                                         <tfoot>
                                             <tr>

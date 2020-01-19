@@ -31,7 +31,7 @@ Route::get('signup', 'LoginController@signup')->name('signup');
 |
 */
 Route::get('admin/index', 'AdminController@index')->name('dashboard');
-Route::get('admin/inventory', 'AdminController@inventory')->name('inventory');
+Route::get('admin/inventory', 'CarController@index')->name('inventory');
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +42,11 @@ Route::get('admin/inventory', 'AdminController@inventory')->name('inventory');
 Route::get('index', 'PagesController@index')->name('home');
 Route::get('car_list', 'PagesController@car_list')->name('car_list');
 Route::get('abouts', 'PagesController@abouts')->name('abouts');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

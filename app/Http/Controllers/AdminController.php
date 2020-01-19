@@ -15,8 +15,4 @@ class AdminController extends Controller
 
     //INVENTORY
 
-    public  function inventory()
-    {
-        return view('admins.inventory');
-    }
 }
