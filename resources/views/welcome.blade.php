@@ -225,7 +225,7 @@
 		<script>
 		$("#countdown")
 			// Year/Month/Day Hour:Minute:Second
-			.countdown("2020/03/01 00:00:00", function(event) {
+			.countdown("2020/06/01 00:00:00", function(event) {
 				$(this).html(
 					event.strftime('%D Days %Hh %Mm %Ss')
 				);

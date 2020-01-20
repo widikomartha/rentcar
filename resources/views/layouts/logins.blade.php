@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
 	<!-- Favicon -->
+    <link rel="icon" href="{!! asset('assets/admin-template/images\favicon.ico') !!}" type="image/x-icon">
 
 <!-- Login css -->
 <!--===============================================================================================-->

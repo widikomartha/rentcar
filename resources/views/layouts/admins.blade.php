@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="{!! asset('assets/admin-template/pages\toolbar\custom-toolbar.css') !!}">
     <!-- animation nifty modal window effects css -->
     <link rel="stylesheet" type="text/css" href="{!! asset('assets/admin-template\css\component.css') !!}">
+    <link rel="stylesheet" type="text/css" href="{!! asset('assets/admin-template\pages\chart\radial\css\radial.css') !!}">
     <!-- Style.css -->
     <link rel="stylesheet" href="{!! asset('assets/admin-template/css\style.css') !!}">
     <link rel="stylesheet" href="{!! asset('assets/admin-template/css\jquery.mCustomScrollbar.css') !!}">
@@ -78,6 +79,11 @@
     <script type="text/javascript" src="{{ asset('assets/admin-template/bower_components\chart.js\js\Chart.js') }}"></script>
     <!-- amchart js -->
     <script type="text/javascript" src="{{ asset('assets/admin-template/js\pcoded.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/admin-template/pages\widget\amchart\amcharts.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/admin-template/pages\widget\amchart\serial.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/admin-template/pages\widget\amchart\gauge.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/admin-template/pages\widget\amchart\pie.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/admin-template/pages\widget\amchart\light.js') }}"></script>
     <!-- data-table js -->
     <script type="text/javascript" src="{{ asset('assets/admin-template/bower_components\datatables.net\js\jquery.dataTables.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/admin-template/bower_components\datatables.net-buttons\js\dataTables.buttons.min.js') }}"></script>
@@ -99,6 +105,8 @@
     <script type="text/javascript" src="{{ asset('assets/admin-template/js\vartical-layout.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/admin-template/js\jquery.mCustomScrollbar.concat.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/admin-template/pages\dashboard\custom-dashboard.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/admin-template/pages\dashboard\crm-dashboard.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/admin-template/pages\dashboard\analytic-dashboard.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/admin-template/js\script.min.js') }}"></script>
 
     

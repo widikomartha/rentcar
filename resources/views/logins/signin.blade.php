@@ -8,30 +8,42 @@
         Login
     </span>
     
+    <form method="POST" action="/login">
+    @csrf
     <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-        <input class="input100" type="text" name="email" placeholder="Email">
+        <input class="input100" type="text" name="email" placeholder="Email" @error('email') is-invalid @enderror" required >
         <span class="focus-input100"></span>
         <span class="symbol-input100">
             <i class="fa fa-envelope" aria-hidden="true"></i>
         </span>
     </div>
+    @error('email')
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+    @enderror
 
     <div class="wrap-input100 validate-input" data-validate = "Password is required">
         <span class="btn-show-pass">
             <i class="fa fa-eye"></i>
         </span>
-        <input class="input100" type="password" name="pass" placeholder="Password">
+        <input class="input100" type="password" name="password" placeholder="Password" @error('password') is-invalid @enderror" name="password" required>
         <span class="focus-input100"></span>
         <span class="symbol-input100">
             <i class="fa fa-lock" aria-hidden="true"></i>
         </span>
     </div>
+    @error('password')
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+    @enderror
 
-    <div class="row">
+    <div class="row m-t-10">
         <div class="col-sm-5">
             <span class="txt1">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+            <input type="checkbox" class="form-check-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+            <label class="form-check-label" for="remember">Remember Me</label>
             </span>
         </div>
         <div class="col-sm-7 text-right">
@@ -41,11 +53,9 @@
         </div>
     </div>
 
-    <a class="container-login100-form-btn" href="{{route('dashboard') }}">
-        <button class="login100-form-btn">
+        <button class="login100-form-btn" type="submit">
             Sign In 
         </button>
-    </a>
 
     
     
@@ -66,5 +76,6 @@
             <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
         </a>
     </div>
+    </form>
 </div>
 @endsection

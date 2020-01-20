@@ -107,9 +107,14 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="auth-normal-sign-in.htm">
+                                <a href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                              document.getElementById('logout-form').submit();">
                                     <i class="feather icon-log-out"></i> Logout
                                 </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
                             </li>
                         </ul>
 
