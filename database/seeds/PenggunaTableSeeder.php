@@ -17,7 +17,7 @@ class PenggunaTableSeeder extends Seeder
                 'password'  => Hash::make('pengguna'),
                 'email'     => 'user@gmail.com',
                 'name'      => 'User Test',
-                'level'     => 1
+                'role'     => 'user'
             ]
         ]);
     }

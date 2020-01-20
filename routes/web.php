@@ -50,6 +50,7 @@ Route::group(['middleware' => ['auth','checkRole:admin']],function(){
 Route::get('signin', 'LoginController@signin')->name('signin');
 Route::post('/login', 'LoginController@login')->name('login');
 Route::get('signup', 'LoginController@signup')->name('signup');
+Route::post('/register', 'LoginController@register')->name('register');
 
 /*
 |--------------------------------------------------------------------------

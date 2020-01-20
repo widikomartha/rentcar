@@ -39,7 +39,7 @@
         </span>
     @enderror
 
-    <div class="row m-t-10">
+    <div class="row m-b-10">
         <div class="col-sm-5">
             <span class="txt1">
             <input type="checkbox" class="form-check-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -57,8 +57,6 @@
             Sign In 
         </button>
 
-    
-    
     <div class="text-center p-t-12">
         <span class="txt1">
             or with your social media
