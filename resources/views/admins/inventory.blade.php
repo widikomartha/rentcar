@@ -88,25 +88,22 @@
                                             <tr>
                                                 <th>No</th>
                                                 <th>Image</th>
-                                                <th>Model</th>
-                                                <th>Licensi Plate</th>
+                                                <th>Tipe</th>
+                                                <th>Plate</th>
                                                 <th>Stock</th>
-                                                <th>Price/day</th>
-                                                <th>Status</th>
+                                                <th>Harga/Hari</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach ($cars as $car)
-                                            
+                                        @foreach ($cars as $data)
                                             <tr>
-                                                <td class="align-middle">1</td>
-                                                <td class="align-middle"><img style="width:200px" src="{{asset('assets/admin-template/images\mobil.png')}}" alt="MOBIL"></td>
-                                                <td class="align-middle">Ferari Enzo</td>
-                                                <td class="align-middle">DK 1305 KU</td>
-                                                <td class="align-middle">150</td>
+                                                <td class="align-middle">{{ $loop->iteration}}</td>
+                                                <td class="align-middle">{{ $data -> file }}</td>
+                                                <td class="align-middle">{{ $data -> tipe }}</td>
+                                                <td class="align-middle">{{ $data -> plate }}</td>
+                                                <td class="align-middle">{{ $data -> tahun }}</td>
                                                 <td class="align-middle">Rp 500.000</td>
-                                                <td class="align-middle"><label class="label label-success">available</label></td>
                                                 <td class="align-middle">
                                                     <i class="feather icon-eye fa-lg" data-toggle="tooltip" data-placement="left" title="View Detail"> </i><br>
                                                     <i class="feather icon-edit fa-lg" data-toggle="tooltip" data-placement="left" title="Edit"> </i><br>
@@ -120,11 +117,10 @@
                                             <tr>
                                                 <th>No</th>
                                                 <th>Image</th>
-                                                <th>Model</th>
-                                                <th>Licensi Plate</th>
+                                                <th>Tipe</th>
+                                                <th>Plate</th>
                                                 <th>Stock</th>
-                                                <th>Price/day</th>
-                                                <th>Status</th>
+                                                <th>Harga/Hari</th>
                                                 <th>Action</th>
                                             </tr>
                                         </tfoot>

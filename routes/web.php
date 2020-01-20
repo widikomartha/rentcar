@@ -43,6 +43,7 @@ Route::get('index', 'PagesController@index')->name('home');
 Route::get('car_list', 'PagesController@car_list')->name('car_list');
 Route::get('abouts', 'PagesController@abouts')->name('abouts');
 
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
