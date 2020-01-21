@@ -59,7 +59,8 @@ Route::post('/register', 'LoginController@register')->name('register');
 |
 */
 //Route::get('admin/index', 'AdminController@index')->name('dashboard');
-Route::get('admin/inventory', 'CarController@index')->name('inventory');
+Route::get('admin/cars', 'CarController@index')->name('cars');
+Route::post('admin/cars', 'CarController@store');
 
 /*
 |--------------------------------------------------------------------------

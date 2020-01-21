@@ -15,7 +15,7 @@ class CarController extends Controller
     public function index()
     {
         $car = Car::all();
-        return view('admins.inventory', ['cars' => $car]);
+        return view('admins.cars.index', ['cars' => $car]);
     }
 
     /**
@@ -36,7 +36,26 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // $car = new Car;
+        // $car->tipe =$request->tipe;
+        // $car->merek =$request->merek;
+        // $car->plate =$request->plate;
+        // $car->tahun =$request->tahun;
+        // $car->harga =$request->harga;
+        // $car->file =$request->file;
+
+        // $car->save();
+
+        Car::create([
+            'tipe' => $request->tipe,
+            'merek' => $request->merek,
+            'plate' => $request->plete,
+            'tahun' => $request->tahun,
+            'harga' => $request->harga,
+            'file' => $request->file,
+            ]);
+
+        return redirect('/admin.cars.index');
     }
 
     /**

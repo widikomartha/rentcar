@@ -29,6 +29,7 @@ perspective effects (not including the modals and the overlay).
 	height: auto;
 	z-index: 2000;
 	visibility: hidden;
+	border-radius:10px;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	backface-visibility: hidden;
@@ -78,7 +79,7 @@ perspective effects (not including the modals and the overlay).
 	text-align: center;
 	font-weight: 400;
 	opacity: 0.8;
-	background: #4680ff;
+	background: #135159;
 	border-radius: 3px 3px 0 0;
 }
 

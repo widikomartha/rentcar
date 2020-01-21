@@ -34,45 +34,49 @@
                                         <div class="md-content">
                                             <h3>Add Car</h3>
                                             <div>
-                                                <form>
-                                                    <div class="row">
-                                                        <label class="col-sm-4 col-lg-2 col-form-label">Normal Text</label>
-                                                        <div class="col-sm-8 col-lg-10">
-                                                            <div class="input-group">
-                                                                <span class="input-group-addon"><i class="icofont icofont-ui-volume"></i></span>
-                                                                <input type="text" class="form-control" placeholder="Normal Text">
-                                                            </div>
+                                                <form method="POST" action="/admin/cars">
+                                                    @csrf
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-3 col-form-label">Tipe Mobil</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control form-control-round" nama="tipe" placeholder="Masukkan Tipe Mobil">
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <label class="col-sm-4 col-lg-2 col-form-label">Bold Text</label>
-                                                        <div class="col-sm-8 col-lg-10">
-                                                            <div class="input-group">
-                                                                <span class="input-group-addon"><i class="icofont icofont-queen"></i></span>
-                                                                <input type="text" class="form-control form-control-bold" placeholder=".form-control-bold">
-                                                            </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-3 col-form-label">Merek Mobil</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control form-control-round" nama="merek" placeholder="Masukkan Merek Mobil">
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <label class="col-sm-4 col-lg-2 col-form-label">Capitalize Text</label>
-                                                        <div class="col-sm-8 col-lg-10">
-                                                            <div class="input-group">
-                                                                <span class="input-group-addon"><i class="icofont icofont-presentation"></i></span>
-                                                                <input type="text" class="form-control form-control-capitalize" placeholder=".form-control-capitalize">
-                                                            </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-3 col-form-label">Plate Mobil</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control form-control-round" nama="plate" placeholder="Masukkan Plate Mobil">
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <label class="col-sm-4 col-lg-2 col-form-label">Uppercase Text</label>
-                                                        <div class="col-sm-8 col-lg-10">
-                                                            <div class="input-group">
-                                                                <span class="input-group-addon"><i class="icofont icofont-wifi"></i></span>
-                                                                <input type="text" class="form-control form-control-uppercase" placeholder=".form-control-uppercase">
-                                                            </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-3 col-form-label">Tahun Pembuatan</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control form-control-round" nama="tahun" placeholder="Masukkan Tahun Pembuatan">
                                                         </div>
                                                     </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-3 col-form-label">Harga Sewa</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="text" class="form-control form-control-round" nama="harga" placeholder="Masukkan Harga Sewa per Hari">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-3 col-form-label">Upload Foto</label>
+                                                        <div class="col-sm-9">
+                                                            <input type="file" class="form-control" nama="file">
+                                                        </div>
+                                                    </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary md-close" data-dismiss="modal">Close</button>
+                                                    <button type="submit" class="btn btn-primary mobtn">Save changes</button>
+                                                </div>
                                                 </form>
-                                                <button type="button" class="btn btn-primary waves-effect md-close">Close</button>
                                             </div>
                                         </div>
                                     </div>
@@ -90,7 +94,7 @@
                                                 <th>Image</th>
                                                 <th>Tipe</th>
                                                 <th>Plate</th>
-                                                <th>Stock</th>
+                                                <th>Tahun</th>
                                                 <th>Harga/Hari</th>
                                                 <th>Action</th>
                                             </tr>
@@ -103,7 +107,7 @@
                                                 <td class="align-middle">{{ $data -> tipe }}</td>
                                                 <td class="align-middle">{{ $data -> plate }}</td>
                                                 <td class="align-middle">{{ $data -> tahun }}</td>
-                                                <td class="align-middle">Rp 500.000</td>
+                                                <td class="align-middle">{{ $data -> harga }}</td>
                                                 <td class="align-middle">
                                                     <i class="feather icon-eye fa-lg" data-toggle="tooltip" data-placement="left" title="View Detail"> </i><br>
                                                     <i class="feather icon-edit fa-lg" data-toggle="tooltip" data-placement="left" title="Edit"> </i><br>
@@ -119,7 +123,7 @@
                                                 <th>Image</th>
                                                 <th>Tipe</th>
                                                 <th>Plate</th>
-                                                <th>Stock</th>
+                                                <th>Tahun</th>
                                                 <th>Harga/Hari</th>
                                                 <th>Action</th>
                                             </tr>
