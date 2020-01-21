@@ -25,7 +25,7 @@ class CarController extends Controller
      */
     public function create()
     {
-        //
+        return view('admins.cars.index');
     }
 
     /**
@@ -46,16 +46,82 @@ class CarController extends Controller
 
         // $car->save();
 
+        $image = $request->file('foto');
+        $image_name = str_replace(' ','',$request->foto).''.time() . '.' . $image->getClientOriginalExtension();
+        $destinationPath = public_path('/assets/admin-template/images/cars'.$image_name);
+
+        $this->validate($request,[
+            'tipe' => 'required',
+            'merek' => 'required',
+            'plate' => 'required',
+            'tahun' => 'required',
+            'harga' => 'required',
+            'foto'  =>'required',
+        ]);
+        
         Car::create([
             'tipe' => $request->tipe,
             'merek' => $request->merek,
-            'plate' => $request->plete,
+            'plate' => $request->plate,
             'tahun' => $request->tahun,
             'harga' => $request->harga,
-            'file' => $request->file,
-            ]);
+            'foto' => $image_name,
+            ]); 
 
-        return redirect('/admin.cars.index');
+        // $this->validate($request,[
+        //     'id'=>'required',
+        //     'tipe' => 'required',
+        //     'merek' => 'required',
+        //     'plate' => 'required',
+        //     'tahun' => 'required',
+        //     'harga' => 'required',
+        //     'foto'  =>'required | mimes:jpeg,jpg,png | image',
+        // ]);
+
+        // $image = $request->file('foto');
+        // $image_name = str_replace(' ','',$request->judul).''.time() . '.' . $image->getClientOriginalExtension();
+        // $destinationPath = public_path('/assets/admin-template/images/cars');     
+
+
+        // DB::table('cars')->insert([
+            
+        //     'tipe' => $request->tipe,
+        //     'merek' => $request->merek,
+        //     'plate' => $request->plete,
+        //     'tahun' => $request->tahun,
+        //     'harga' => $request->harga,
+        //     'foto' => $new_name,
+        // ]);
+        // alihkan halaman ke halaman pegawai
+
+        // $this->validate($request,[
+        //     'tipe' => 'required',
+        //     'merek' => 'required',
+        //     'plate' => 'required',
+        //     'tahun' => 'required',
+        //     'harga' => 'required',
+        //     'foto'  =>'required | mimes:jpeg,jpg,png | image',
+        // ]);
+    
+        //     $foto = $request->file('foto');
+    
+        //     $new_name = rand() . '.' . $foto->getClientOriginalExtension();
+        //     $foto->move(public_path('fotos'), $new_name);
+        //     $form_data = array(
+        //         'tipe' => $request->tipe,
+        //         'merek' => $request->merek,
+        //         'plate' => $request->plate,
+        //         'tahun' => $request->tahun,
+        //         'harga' => $request->harga,
+        //         'foto' => $new_name,
+        //     );
+    
+        //     Car::create($form_data);
+
+        return redirect('/admin/cars');
+     
+        
+
     }
 
     /**

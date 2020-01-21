@@ -34,42 +34,42 @@
                                         <div class="md-content">
                                             <h3>Add Car</h3>
                                             <div>
-                                                <form method="POST" action="/admin/cars">
+                                                <form method="POST" action="/admin/cars" enctype="multipart/form-data">
                                                     @csrf
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Tipe Mobil</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" class="form-control form-control-round" nama="tipe" placeholder="Masukkan Tipe Mobil">
+                                                            <input type="text" class="form-control form-control-round" name="tipe" placeholder="Masukkan Tipe Mobil">
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Merek Mobil</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" class="form-control form-control-round" nama="merek" placeholder="Masukkan Merek Mobil">
+                                                            <input type="text" class="form-control form-control-round" name="merek" placeholder="Masukkan Merek Mobil">
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Plate Mobil</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" class="form-control form-control-round" nama="plate" placeholder="Masukkan Plate Mobil">
+                                                            <input type="text" class="form-control form-control-round" name="plate" placeholder="Masukkan Plate Mobil">
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Tahun Pembuatan</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" class="form-control form-control-round" nama="tahun" placeholder="Masukkan Tahun Pembuatan">
+                                                            <input type="text" class="form-control form-control-round" name="tahun" placeholder="Masukkan Tahun Pembuatan">
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Harga Sewa</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" class="form-control form-control-round" nama="harga" placeholder="Masukkan Harga Sewa per Hari">
+                                                            <input type="text" class="form-control form-control-round" name="harga" placeholder="Masukkan Harga Sewa per Hari">
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Upload Foto</label>
                                                         <div class="col-sm-9">
-                                                            <input type="file" class="form-control" nama="file">
+                                                            <input type="file" class="form-control" name="foto">
                                                         </div>
                                                     </div>
                                                 <div class="modal-footer">
@@ -103,7 +103,7 @@
                                         @foreach ($cars as $data)
                                             <tr>
                                                 <td class="align-middle">{{ $loop->iteration}}</td>
-                                                <td class="align-middle">{{ $data -> file }}</td>
+                                                <td class="align-middle"><img src="{{ URL::to('/') }}/images/{{ $data->foto }}" /></td>
                                                 <td class="align-middle">{{ $data -> tipe }}</td>
                                                 <td class="align-middle">{{ $data -> plate }}</td>
                                                 <td class="align-middle">{{ $data -> tahun }}</td>
