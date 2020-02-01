@@ -15,33 +15,33 @@ class LoginController extends Controller
         return view('logins.signin');
     }
 
-    public function login(Request $request)
-    {
+    // public function login(Request $request)
+    // {
 
-        $notification_gagal = array(
-            'message' => 'Login Gagal',
-            'alert-type' => 'error'
-        );
+    //     $notification_gagal = array(
+    //         'message' => 'Login Gagal',
+    //         'alert-type' => 'error'
+    //     );
 
-         $notification_berhasil = array(
-            'message' => 'Login berhasil',
-            'alert-type' => 'success'
-        );
+    //      $notification_berhasil = array(
+    //         'message' => 'Login berhasil',
+    //         'alert-type' => 'success'
+    //     );
 
-        if(!\Auth::attempt(['email' => $request->email, 'password' => $request->password ])){
-            return redirect()->back()->with($notification_gagal);
+    //     if(!\Auth::attempt(['email' => $request->email, 'password' => $request->password ])){
+    //         return redirect()->back()->with($notification_gagal);
 
-        }else {
-            if(\Auth::user()->role=="user"){
-                return redirect('/user');
-                //return redirect()->intended('defaultpage');
-            }else{
-                return redirect('/admin/index');
-            }
+    //     }else {
+    //         if(\Auth::user()->role=="user"){
+    //             return redirect('/index');
+    //             //return redirect()->intended('defaultpage');
+    //         }else{
+    //             return redirect('/admin/index');
+    //         }
             
-        }
+    //     }
     
-    }
+    // }
 
 
 
@@ -50,31 +50,31 @@ class LoginController extends Controller
         return view('logins.signup');
     }
 
-    public function register(Request $request)
-    {
+    // public function register(Request $request)
+    // {
 
-        $notification_gagal = array(
-            'message' => 'Register Gagal',
-            'alert-type' => 'error'
-        );
+    //     $notification_gagal = array(
+    //         'message' => 'Register Gagal',
+    //         'alert-type' => 'error'
+    //     );
 
-         $notification_berhasil = array(
-            'message' => 'Register berhasil',
-            'alert-type' => 'success'
-        );
+    //      $notification_berhasil = array(
+    //         'message' => 'Register berhasil',
+    //         'alert-type' => 'success'
+    //     );
 
-        if(!\Auth::attempt(['email' => $request->email, 'password' => $request->password ])){
-            return redirect()->back()->with($notification_gagal);
+    //     if(!\Auth::attempt(['email' => $request->email, 'password' => $request->password ])){
+    //         return redirect()->back()->with($notification_gagal);
 
-        }else {
-            if(\Auth::user()->role=="user"){
-                return redirect('/user');
-                //return redirect()->intended('defaultpage');
-            }else{
-                return redirect('/admin/index');
-            }
+    //     }else {
+    //         if(\Auth::user()->role=="user"){
+    //             return redirect('/user');
+    //             //return redirect()->intended('defaultpage');
+    //         }else{
+    //             return redirect('/admin/index');
+    //         }
             
-        }
+    //     }
     
-    }
+    // }
 }

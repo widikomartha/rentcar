@@ -6,8 +6,6 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-
-    
     //DASHBOARD
 
     public  function index()

@@ -56,7 +56,7 @@
         <span class="btn-show-pass">
             <i class="fa fa-eye"></i>
         </span>
-        <input class="input100" type="password" name="pass" placeholder="Re-Password" id="password-confirm" type="password" name="password_confirmation" required autocomplete="new-password">
+        <input class="input100" type="password" placeholder="Re-Password" type="password" name="password_confirmation" required autocomplete="new-password">
         <span class="focus-input100"></span>
         <span class="symbol-input100">
             <i class="fa fa-lock" aria-hidden="true"></i>

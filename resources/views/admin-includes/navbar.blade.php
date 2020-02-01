@@ -11,7 +11,7 @@
             <li class="{{ Request::path() == 'admin/cars' ? 'active' : '' }}">
                 <a href="{{route('cars') }}">
                     <span class="pcoded-micon"><i class="feather icon-aperture rotate-refresh"></i></span>
-                    <span class="pcoded-mtext">Inventory</span>
+                    <span class="pcoded-mtext">Cars</span>
                 </a>
             </li>
             <li class="">

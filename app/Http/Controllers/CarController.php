@@ -7,6 +7,7 @@ use App\Car;
 
 class CarController extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *

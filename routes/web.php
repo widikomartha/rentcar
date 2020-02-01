@@ -15,32 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/*//Route for User Auth
-Route::group(['prefix' => 'user'],function(){
-    Route::get('/', function(){
-        return redirect()->route('pages.index');
-    });
-    // User Register
-    Route::post('register/post', 'AuthCustom\LoginController@registerPost')
-        ->name('Auth.User.RegisterPost');
 
-    //User Login Logout
-    Route::post('login', 'AuthCustom\LoginController@login')
-        ->name('Auth.User.LoginPost');
-    Route::get('logout', 'AuthCustom\LoginController@logout')
-        ->name('Auth.User.Logout');
-    
-    //User Profile
-});*/
 Auth::routes();
 
-Route::group(['middleware' => ['auth','checkRole:admin']],function(){
-	Route::get('admin/index', 'AdminController@index')->name('dashboard');
- });
-
- Route::group(['middleware' => ['auth','checkRole:user']],function(){
-
- });
 /*
 |--------------------------------------------------------------------------
 | Routes Logins
@@ -48,9 +25,7 @@ Route::group(['middleware' => ['auth','checkRole:admin']],function(){
 |
 */
 Route::get('signin', 'LoginController@signin')->name('signin');
-Route::post('/login', 'LoginController@login')->name('login');
 Route::get('signup', 'LoginController@signup')->name('signup');
-Route::post('/register', 'LoginController@register')->name('register');
 
 /*
 |--------------------------------------------------------------------------
@@ -58,10 +33,22 @@ Route::post('/register', 'LoginController@register')->name('register');
 |--------------------------------------------------------------------------
 |
 */
-//Route::get('admin/index', 'AdminController@index')->name('dashboard');
-Route::get('admin/cars', 'CarController@index')->name('cars');
-Route::get('admin/cars/create', 'CarController@create');
-Route::post('/admin/cars', 'CarController@store');
+Route::group(['middleware' => ['auth','checkRole:admin']],function(){
+    Route::get('admin/index', 'AdminController@index')->name('dashboard');
+    Route::get('admin/cars', 'CarController@index')->name('cars');
+    Route::get('admin/cars/create', 'CarController@create');
+    Route::post('/admin/cars', 'CarController@store');
+ });
+ 
+/*
+|--------------------------------------------------------------------------
+| Routes Users
+|--------------------------------------------------------------------------
+|
+*/
+ Route::group(['middleware' => ['auth','checkRole:user']],function(){
+
+ });
 
 /*
 |--------------------------------------------------------------------------

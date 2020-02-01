@@ -20,7 +20,7 @@ class CreateCarsTable extends Migration
             $table->string('plate');
             $table->string('tahun');
             $table->string('harga');
-            $table->string('file')->nullable();
+            $table->string('foto')->nullable();
             $table->timestamps();
         });
     }

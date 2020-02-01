@@ -8,9 +8,9 @@
         Login
     </span>
     
-    <form method="POST" action="/login">
+    <form method="POST" action="{{ route('login') }}">
     @csrf
-    <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+    <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@example.com">
         <input class="input100" type="text" name="email" placeholder="Email" @error('email') is-invalid @enderror" required >
         <span class="focus-input100"></span>
         <span class="symbol-input100">

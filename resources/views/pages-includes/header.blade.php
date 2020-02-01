@@ -7,8 +7,18 @@
         <!-- BEGIN CART -->
         <div class="top-cart-block">
           <div class="top-cart-info">
-            <a href="javascript:void(0);" class="top-cart-info-count">My Account </a>
-            <a href="{{route('signin') }}" class="top-cart-info-value">Log In</a>
+            @guest
+              <a href="javascript:void(0);" class="top-cart-info-count">My Account </a>
+              <a href="{{route('signin') }}" class="top-cart-info-value">Log In</a>
+            @else
+              <a href="javascript:void(0);" class="top-cart-info-count">{{ Auth::user()->name }} </a>
+              <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                  <i class="feather icon-log-out"></i> Log Out
+              </a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  @csrf
+              </form>
+            @endguest
           </div>     
         </div>
         <!--END CART -->
