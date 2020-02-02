@@ -23,7 +23,7 @@ class UserSeeder extends Seeder
                 'password'          => Hash::make('admin'),
                 'role'              => 'admin',
                 'remember_token'    => Str ::random(10),
-    ],
+            ],
             [
                 'name'              => 'Widi Komartha',
                 'email'             => 'wiko@gmail.com',

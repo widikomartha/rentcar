@@ -9,11 +9,11 @@
           <div class="top-cart-info">
             @guest
               <a href="javascript:void(0);" class="top-cart-info-count">My Account </a>
-              <a href="{{route('signin') }}" class="top-cart-info-value">Log In</a>
+              <a href="{{route('signin') }}" class="top-cart-info-value"> <i class="feather icon-log-in"></i> Login</a>
             @else
               <a href="javascript:void(0);" class="top-cart-info-count">{{ Auth::user()->name }} </a>
               <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                  <i class="feather icon-log-out"></i> Log Out
+                  <i class="feather icon-log-out"></i> Logout
               </a>
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                   @csrf

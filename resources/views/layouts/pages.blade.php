@@ -32,6 +32,7 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
     <link rel="stylesheet" href="{!! asset('assets/pages-template/plugins/font-awesome/css/font-awesome.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('assets/pages-template/plugins/bootstrap-4.4.1-dist\css/bootstrap.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('assets/pages-template/plugins/bootstrap/css/bootstrap.min.css') !!}">
+    <link rel="stylesheet" href="{!! asset('assets/admin-template/icon\feather\css\feather.css') !!}">
     <!-- Global styles END --> 
     
     <!-- Page level plugin styles START -->
