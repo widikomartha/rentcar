@@ -25955,3 +25955,7 @@ Misc tools
 .margin-right-10 {
 	margin-right: 10px !important;
 }
+
+td i{
+    cursor: pointer;
+}

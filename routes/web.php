@@ -34,10 +34,16 @@ Route::get('signup', 'LoginController@signup')->name('signup');
 |
 */
 Route::group(['middleware' => ['auth','checkRole:admin']],function(){
-    Route::get('admin/index', 'AdminController@index')->name('dashboard');
-    Route::get('admin/cars', 'CarController@index')->name('cars');
-    Route::get('admin/cars/create', 'CarController@create');
-    Route::post('/admin/cars', 'CarController@store');
+    Route::get('/admin/index', 'AdminsController@index')->name('dashboard');
+    // Route::resource('admin', 'AdminsController');
+    
+    // Route::get('admin/cars', 'CarsController@index')->name('cars');
+    // Route::get('admin/cars/create', 'CarsController@create');
+    // Route::post('/admin/cars', 'CarsController@store');
+    // Route::delete('/admin/cars/{car}', 'CarsController@destroy');
+    // Route::get('admin/cars/{car}/edit', 'CarsController@edit');
+    
+    Route::resource('admin/cars', 'CarsController');
  });
  
 /*
@@ -58,13 +64,13 @@ Route::group(['middleware' => ['auth','checkRole:admin']],function(){
 */
 Route::get('index', 'PagesController@index')->name('home');
 Route::get('car_list', 'PagesController@car_list')->name('car_list');
+Route::get('booking', 'PagesController@booking')->name('booking');
 Route::get('abouts', 'PagesController@abouts')->name('abouts');
 
+
+//Route::get('/home', 'HomeController@index')->name('home');
+
 /*
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

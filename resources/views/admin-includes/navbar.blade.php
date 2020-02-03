@@ -3,13 +3,13 @@
         <div class="pcoded-navigatio-lavel">Navigation</div>
         <ul class="pcoded-item pcoded-left-item">
             <li class="{{ Request::path() == 'admin/index' ? 'active' : '' }}">
-                <a href="{{route('dashboard') }}">
+                <a href="/admin/index">
                     <span class="pcoded-micon"><i class="feather icon-home"></i></span>
                     <span class="pcoded-mtext">Dashboard</span>
                 </a>
             </li>
             <li class="{{ Request::path() == 'admin/cars' ? 'active' : '' }}">
-                <a href="{{route('cars') }}">
+                <a href="/admin/cars">
                     <span class="pcoded-micon"><i class="feather icon-aperture rotate-refresh"></i></span>
                     <span class="pcoded-mtext">Cars</span>
                 </a>

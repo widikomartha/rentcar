@@ -22,7 +22,7 @@ class UserSeeder extends Seeder
                 'email_verified_at' => now(),
                 'password'          => Hash::make('admin'),
                 'role'              => 'admin',
-                'remember_token'    => Str ::random(10),
+                'remember_token'    => Str ::random(60),
             ],
             [
                 'name'              => 'Widi Komartha',
@@ -30,7 +30,7 @@ class UserSeeder extends Seeder
                 'email_verified_at' => now(),
                 'password'          => Hash::make('wiko'),
                 'role'              => 'user',
-                'remember_token'    => Str ::random(10),
+                'remember_token'    => Str ::random(60),
             ],
         ]);
     }

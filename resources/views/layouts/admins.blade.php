@@ -99,6 +99,7 @@
     
     <script type="text/javascript" src="{{ asset('assets/admin-template\js\modalEffects.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/admin-template\js\classie.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/pages-template/plugins\autoNumeric\autoNumeric.js') }}"></script>
     
     <!-- custom js -->
     <script type="text/javascript" src="{{ asset('assets/admin-template/pages\data-table\extensions\colreorder\js\colreorder-custom.js') }}"></script>
@@ -119,6 +120,8 @@
 
   gtag('config', 'UA-23581568-13');
 </script>
+
+@yield('script')
 
 </body>
 

@@ -114,7 +114,7 @@
 						</div>
 					</div>
 				</div>
-				<!-- END - SLIDE 1 / Home -->$
+				<!-- END - SLIDE 1 / Home -->
 
 			</div>
 			<!-- END - sl-slider -->

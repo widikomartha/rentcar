@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Car;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
@@ -18,7 +19,8 @@ class PagesController extends Controller
 
     public  function car_list()
     {
-        return view('pages.car_list');
+        $car = Car::all();
+        return view('pages.car_list', compact('car'), ['cars' => $car]);
     }
 
     //ABOUTS US
@@ -26,5 +28,10 @@ class PagesController extends Controller
     public  function abouts()
     {
         return view('pages.abouts');
+    }
+
+    public  function booking()
+    {
+        return view('pages.booking');
     }
 }

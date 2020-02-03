@@ -11,8 +11,8 @@
                 <!-- Page-header start -->
                 <div class="page-header">
                     <div class="row align-items-end">
-                        <div class="col-lg-8"><i class="feather icon-home fa-2x"> </i>
-                            <div class="page-header-title">
+                        <div class="col-lg-8"><i class="fa fa-car fa-2x"> </i>
+                            <div class="page-header-title margin-left-10">
                                 <h4> @yield('title')</h4>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Tipe Mobil</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" class="form-control form-control-round" name="tipe" placeholder="Masukkan Tipe Mobil">
+                                                            <input type="text" class="form-control form-control-round" name="tipe" placeholder="Masukkan Tipe Mobil" value=>
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
@@ -63,7 +63,7 @@
                                                     <div class="form-group row">
                                                         <label class="col-sm-3 col-form-label">Harga Sewa</label>
                                                         <div class="col-sm-9">
-                                                            <input type="text" class="form-control form-control-round" name="harga" placeholder="Masukkan Harga Sewa per Hari">
+                                                            <input class="form-control form-control-round" type="text" id="rupiah" name="harga" data-a-sign="Rp " data-a-pad="false" placeholder="Masukkan Harga Sewa per Hari">
                                                         </div>
                                                     </div>
                                                     <div class="form-group row">
@@ -103,15 +103,23 @@
                                         @foreach ($cars as $data)
                                             <tr>
                                                 <td class="align-middle">{{ $loop->iteration}}</td>
-                                                <td class="align-middle"><img src="{{ URL::to('/') }}/images/{{ $data->foto }}" /></td>
+                                                <td class="align-middle"><img src="{{ asset('image/'.$data->foto)  }}" height="100px"/></td>
                                                 <td class="align-middle">{{ $data -> tipe }}</td>
                                                 <td class="align-middle">{{ $data -> plate }}</td>
                                                 <td class="align-middle">{{ $data -> tahun }}</td>
                                                 <td class="align-middle">{{ $data -> harga }}</td>
                                                 <td class="align-middle">
                                                     <i class="feather icon-eye fa-lg" data-toggle="tooltip" data-placement="left" title="View Detail"> </i><br>
-                                                    <i class="feather icon-edit fa-lg" data-toggle="tooltip" data-placement="left" title="Edit"> </i><br>
-                                                    <i class="feather icon-trash-2 fa-lg" data-toggle="tooltip" data-placement="left" title="Delete"> </i>
+                                                    <a href="cars/{{ $data->id }}/edit" >
+                                                        <i class="feather icon-edit fa-lg" data-toggle="tooltip" data-placement="left" title="Edit"> </i><br>
+                                                    </a>
+                                                    <form action="cars/{{$data->id }}" method="POST">
+                                                        @method('delete')
+                                                        @csrf
+                                                        <button type="submit" onclick="return confirm('Apakah kamu yakin ingin menghapus mobil {{ $data->tipe }}');" style="border: none; background: none;">
+                                                            <i class="feather icon-trash-2 fa-lg" data-toggle="tooltip" data-placement="left" title="Delete"> </i>
+                                                        </button>
+                                                    </form>
                                                 </td>
                                             </tr>
                                         @endforeach
@@ -144,5 +152,38 @@
         </div>
     </div>
 </div>
+
+@endsection
+
+@section('script')
+
+<script type="text/javascript">
+    
+    var rupiah = document.getElementById("rupiah");
+    rupiah.addEventListener("keyup", function(e) {
+    // tambahkan 'Rp.' pada saat form di ketik
+    // gunakan fungsi formatRupiah() untuk mengubah angka yang di ketik menjadi format angka
+    rupiah.value = formatRupiah(this.value, "Rp ");
+    });
+
+    /* Fungsi formatRupiah */
+    function formatRupiah(angka, prefix) {
+    var number_string = angka.replace(/[^,\d]/g, "").toString(),
+        split = number_string.split(","),
+        sisa = split[0].length % 3,
+        rupiah = split[0].substr(0, sisa),
+        ribuan = split[0].substr(sisa).match(/\d{3}/gi);
+
+    // tambahkan titik jika yang di input sudah menjadi angka ribuan
+    if (ribuan) {
+        separator = sisa ? "." : "";
+        rupiah += separator + ribuan.join(".");
+    }
+
+    rupiah = split[1] != undefined ? rupiah + "," + split[1] : rupiah;
+    return prefix == undefined ? rupiah : rupiah ? "Rp " + rupiah : "";
+    }
+</script>
+
 
 @endsection

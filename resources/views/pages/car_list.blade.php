@@ -86,26 +86,24 @@
         </div>
         <!-- BEGIN PRODUCT LIST -->
         <div class="row product-list">
-        <?php 
-            for ($i = 1; $i <= 15; $i++):
-        ?>
+        
+        @foreach ($cars as $data)
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <div class="product-item">
                   <div class="pi-img-wrapper">
-                    <img src="{{asset('assets/pages-template/pages/img/products/avanza.jpg')}}" class="img-responsive" alt="Berry Lace Dress">
+                    <img src="{{ asset('image/'.$data->foto)  }}" class="img-car-list">
                     <div>
-                        <a href="{{asset('assets/pages-template/pages/img/products/avanza.jpg')}}" class="btn btn-default fancybox-button">Zoom</a>
+                        <a href="{{ asset('image/'.$data->foto)  }}" class="btn btn-default fancybox-button">Zoom</a>
                         <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
                     </div>
                   </div>
-                  <h3><a href="shop-item.html">Berry Lace Dress</a></h3>
-                  <div class="pi-price">$29.00</div>
-                  <a href="javascript:;" class="btn btn-default add2cart">Add to cart</a>
+                  <h3><a href="shop-item.html">{{ $data -> merek }} {{ $data -> tipe }}</a></h3>
+                  <div class="pi-price">{{ $data -> harga }}</div>
+                  <a href="{{route('booking') }}" class="btn btn-default add2cart">Pesan</a>
                 </div>
             </div>
-        <?php
-            endfor;
-        ?>
+        @endforeach
+        
         </div>
         <!-- END PRODUCT LIST -->
         <!-- BEGIN PAGINATOR -->
