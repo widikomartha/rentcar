@@ -35,6 +35,7 @@ Route::get('signup', 'LoginController@signup')->name('signup');
 */
 Route::group(['middleware' => ['auth','checkRole:admin']],function(){
     Route::get('/admin/index', 'AdminsController@index')->name('dashboard');
+    Route::get('/admin/reservations', 'reservationsController@index');
     // Route::resource('admin', 'AdminsController');
     
     // Route::get('admin/cars', 'CarsController@index')->name('cars');
@@ -52,6 +53,12 @@ Route::group(['middleware' => ['auth','checkRole:admin']],function(){
 |--------------------------------------------------------------------------
 |
 */
+
+Route::group(['middleware' => ['auth']],function(){
+    Route::get('booking', 'PagesController@booking')->name('booking');
+
+ });
+
  Route::group(['middleware' => ['auth','checkRole:user']],function(){
 
  });
@@ -64,7 +71,6 @@ Route::group(['middleware' => ['auth','checkRole:admin']],function(){
 */
 Route::get('index', 'PagesController@index')->name('home');
 Route::get('car_list', 'PagesController@car_list')->name('car_list');
-Route::get('booking', 'PagesController@booking')->name('booking');
 Route::get('abouts', 'PagesController@abouts')->name('abouts');
 
 
