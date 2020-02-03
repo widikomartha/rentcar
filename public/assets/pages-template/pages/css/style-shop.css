@@ -443,15 +443,12 @@ Header and header elements
 }
 .goods-data th,
 .checkout-page th {
-	font: 16px "Open Sans", sans-serif;
-	text-transform: uppercase;
 	border-bottom: solid 1px #ecebeb;
 	padding-bottom: 8px;
 }
 .goods-data td,
 .checkout-page td {
-	vertical-align: top;
-	padding: 20px 20px 20px 0;
+	padding: 10px;
 	border-bottom: solid 1px #ecebeb;
 }
 .goods-page-image,

@@ -97,6 +97,7 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
 
     <script type="text/javascript" src="{{ asset('assets/pages-template/corporate/scripts/layout.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/pages-template/pages/scripts/bs-carousel.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/pages-template/pages/scripts/checkout.js') }}"></script>
   
     
     <script type="text/javascript">

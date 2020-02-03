@@ -11,8 +11,8 @@
                 <!-- Page-header start -->
                 <div class="page-header">
                     <div class="row align-items-end">
-                        <div class="col-lg-8"><i class="fa fa-car fa-2x"> </i>
-                            <div class="page-header-title margin-left-10">
+                        <div class="col-lg-8"><i class="fa fa-list-alt fa-2x margin-right-10"> </i>
+                            <div class="page-header-title" >
                                 <h4> @yield('title')</h4>
                             </div>
                         </div>
@@ -40,29 +40,6 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach ($cars as $data)
-                                            <tr>
-                                                <td class="align-middle">{{ $loop->iteration}}</td>
-                                                <td class="align-middle"><img src="{{ asset('image/'.$data->foto)  }}" height="100px"/></td>
-                                                <td class="align-middle">{{ $data -> tipe }}</td>
-                                                <td class="align-middle">{{ $data -> plate }}</td>
-                                                <td class="align-middle">{{ $data -> tahun }}</td>
-                                                <td class="align-middle">{{ $data -> harga }}</td>
-                                                <td class="align-middle">
-                                                    <i class="feather icon-eye fa-lg" data-toggle="tooltip" data-placement="left" title="View Detail"> </i><br>
-                                                    <a href="cars/{{ $data->id }}/edit" >
-                                                        <i class="feather icon-edit fa-lg" data-toggle="tooltip" data-placement="left" title="Edit"> </i><br>
-                                                    </a>
-                                                    <form action="cars/{{$data->id }}" method="POST">
-                                                        @method('delete')
-                                                        @csrf
-                                                        <button type="submit" onclick="return confirm('Apakah kamu yakin ingin menghapus mobil {{ $data->tipe }}');" style="border: none; background: none;">
-                                                            <i class="feather icon-trash-2 fa-lg" data-toggle="tooltip" data-placement="left" title="Delete"> </i>
-                                                        </button>
-                                                    </form>
-                                                </td>
-                                            </tr>
-                                        @endforeach
                                         
                                         </tbody>
                                         <tfoot>

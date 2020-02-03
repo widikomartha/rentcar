@@ -14,8 +14,8 @@
                     <span class="pcoded-mtext">Cars</span>
                 </a>
             </li>
-            <li class="">
-                <a href="navbar-light.htm">
+            <li class="{{ Request::path() == 'admin/reservations' ? 'active' : '' }}">
+                <a href="/admin/reservations">
                     <span class="pcoded-micon"><i class="fa fa-list-alt"></i></span>
                     <span class="pcoded-mtext">Reservation</span>
                 </a>

@@ -27,7 +27,7 @@
                         </a>
                         </h2>
                     </div>
-                    <div id="payment-address-content" class="panel-collapse collapse">
+                    <div id="payment-address-content" class="panel-collapse collapse in">
                         <div class="panel-body row">
                         <div class="col-md-6 col-sm-6">
                             <h3>Your Personal Details</h3>
@@ -43,9 +43,24 @@
                             <label for="telephone">Telephone <span class="require">*</span></label>
                             <input type="text" id="telephone" class="form-control">
                             </div>
+                            <p>Tanggal Peminjaman :</p>
                             <div class="form-group">
-                            <label for="telephone">Telephone <span class="require">*</span></label>
-                            <input type="date" id="telephone" class="form-control">
+                                <div class='input-group date' id='datetimepicker6'>
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+
+                            <p>Tanggal Pengembalian :</p>
+                            <div class="form-group">
+                                <div class='input-group date' id='datetimepicker7'>
+                                    <input type='text' class="form-control" />
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
                             </div>
     
                         </div>
@@ -53,7 +68,7 @@
                         <hr>
                         <div class="col-md-12">                      
                             
-                            <button class="btn btn-primary  pull-right" type="submit" data-toggle="collapse" data-parent="#checkout-page" data-target="#shipping-address-content" id="button-payment-address">Continue</button>
+                            <button class="btn btn-primary  pull-right" type="submit" data-toggle="collapse" data-parent="#checkout-page" data-target="#payment-method-content" id="button-payment-address">Continue</button>
                             <div class="checkbox pull-right">
                             <label>
                                 <input type="checkbox"> I have read and agree to the <a title="Privacy Policy" href="javascript:;">Privacy Policy</a> &nbsp;&nbsp;&nbsp; 
@@ -112,23 +127,24 @@
                         <div class="panel-body row">
                         <div class="col-md-12 clearfix">
                             <div class="table-wrapper-responsive">
-                            <table>
+                            <table class="text-center">
                             <tr>
-                                <th class="checkout-image">Image</th>
-                                <th class="checkout-description">Tipe</th>
-                                <th class="checkout-model">Merek</th>
-                                <th class="checkout-quantity">Plate</th>
-                                <th class="checkout-price">Harga</th>
+                                <th class="text-center">Image</th>
+                                <th class="text-center">Tipe</th>
+                                <th class="text-center">Merek</th>
+                                <th class="text-center">Plate</th>
+                                <th class="text-center">Hari</th>
+                                <th class="text-center">Harga</th>
+                                <th class="text-center">Total</th>
                             </tr>
                             <tr>
-                                <td class="checkout-image">
-                                <a href="javascript:;"><img src="{{ asset('image/yaris.jpg')  }}" width="250px" height="100px"/></a>
-                                </td>
-                                <td class="checkout-description">Yaris
-                                </td>
-                                <td class="checkout-model">Toyota</td>
-                                <td class="checkout-quantity">DK 4773 KU</td>
-                                <td class="checkout-price"><strong><span>Rp </span>350.000</strong></td>
+                                <td><img src="{{ asset('image/yaris.jpg')  }}" height="100px"/></td>
+                                <td>Yaris</td>
+                                <td>Toyota</td>
+                                <td>DK 4773 KU</td>
+                                <td>DK 4773 KU</td>
+                                <td><strong><span>Rp </span>350.000</strong></td>
+                                <td><strong><span>Rp </span>350.000</strong></td>
                             </tr>
                             </table>
                             </div>
@@ -170,4 +186,28 @@
 
 @section('script')
 
+<script type="text/javascript">
+
+    $(function () {
+        $('#datetimepicker6').datetimepicker({
+            locale:'id',  
+            format: 'dddd, DD MMMM YYYY',
+            
+        });
+        $('#datetimepicker7').datetimepicker({
+            locale:'id',
+            format: 'dddd, DD MMMM YYYY',
+            useCurrent: false //Important! See issue #1075
+        });
+        $("#datetimepicker6").on("dp.change", function (e) {
+            $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+
+        });
+        $("#datetimepicker7").on("dp.change", function (e) {
+            $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+        });
+
+        
+    });
+</script>
 @endsection
