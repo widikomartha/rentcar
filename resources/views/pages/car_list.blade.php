@@ -99,7 +99,7 @@
                   </div>
                   <h3><a href="shop-item.html">{{ $data -> merek }} {{ $data -> tipe }}</a></h3>
                   <div class="pi-price">{{ $data -> harga }}</div>
-                  <a href="{{route('booking') }}" class="btn btn-default add2cart">Pesan</a>
+                <a href="/booking/{{$data -> id}}" class="btn btn-default add2cart">Pesan</a>
                 </div>
             </div>
         @endforeach

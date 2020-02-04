@@ -19,7 +19,7 @@ class CarSeeder extends Seeder
                 'merek'             => 'Toyota',
                 'plate'             => 'DK 3728 KU',
                 'tahun'             => '2015',
-                'harga'             => 'Rp 200.000',
+                'harga'             => '200000',
                 'foto'              => 'avanza.jpg',
             ],
             [
@@ -27,7 +27,7 @@ class CarSeeder extends Seeder
                 'merek'             => 'Suzuki',
                 'plate'             => 'DK 7483 HW',
                 'tahun'             => '2016',
-                'harga'             => 'Rp 250.000',
+                'harga'             => '250000',
                 'foto'              => 'suzuki-apv.jpg',
             ],
             [
@@ -35,7 +35,7 @@ class CarSeeder extends Seeder
                 'merek'             => 'Honda',
                 'plate'             => 'DK 3728 KU',
                 'tahun'             => '2017',
-                'harga'             => 'Rp 300.000',
+                'harga'             => '300000',
                 'foto'              => 'jazz.jpg',
             ],
             [
@@ -43,7 +43,7 @@ class CarSeeder extends Seeder
                 'merek'             => 'Suzuki',
                 'plate'             => 'DK 8436 KU',
                 'tahun'             => '2016',
-                'harga'             => 'Rp 250.000',
+                'harga'             => '250000',
                 'foto'              => 'ertiga.jpg',
             ],
             [
@@ -51,7 +51,7 @@ class CarSeeder extends Seeder
                 'merek'             => 'Toyota',
                 'plate'             => 'DK 8364 WY',
                 'tahun'             => '2018',
-                'harga'             => 'Rp 350.000',
+                'harga'             => '350000',
                 'foto'              => 'yaris.jpg',
             ],
         ]);

@@ -40,6 +40,7 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
     <link rel="stylesheet" href="{!! asset('assets/pages-template/plugins/fancybox/source/jquery.fancybox.css') !!}">
     <link rel="stylesheet" href="{!! asset('assets/pages-template/plugins/owl.carousel/assets/owl.carousel.css') !!}">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css">
+    <link rel="stylesheet" href="{!! asset('assets/pages-template/plugins/uniform/css/uniform.default.css') !!}">
     <!-- Page level plugin styles END -->
 
     <!-- Theme styles START -->
@@ -89,14 +90,15 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
     <script type="text/javascript" src="{{ asset('assets/pages-template/plugins/zoom/jquery.zoom.min.js') }}"></script>
     <!-- Quantity -->
     <script type="text/javascript" src="{{ asset('assets/pages-template/plugins/bootstrap-touchspin/bootstrap.touchspin.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/pages-template/plugins/uniform/jquery.uniform.min.js') }}"></script>
     
     <!-- BEGIN PAGE LEVEL JAVASCRIPTS (REQUIRED ONLY FOR CURRENT PAGE) -->
     <script type="text/javascript" src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <script type="text/javascript" src="{{ asset('assets/bower_components/moment/min/moment-with-locales.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }}"></script>
 
-    <script type="text/javascript" src="{{ asset('assets/pages-template/corporate/scripts/layout.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/pages-template/pages/scripts/bs-carousel.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/pages-template/corporate/scripts/layout.js') }}"></script>
     <script type="text/javascript" src="{{ asset('assets/pages-template/pages/scripts/checkout.js') }}"></script>
   
     
@@ -109,6 +111,8 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
             Layout.initFixHeaderWithPreHeader();
             Layout.initNavScrolling();
             Layout.initSliderRange();
+            Layout.initUniform();
+            Checkout.init();
         });
     </script>
     <!-- END PAGE LEVEL JAVASCRIPTS -->

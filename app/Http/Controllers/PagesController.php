@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Car;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class PagesController extends Controller
 {
@@ -30,8 +31,11 @@ class PagesController extends Controller
         return view('pages.abouts');
     }
 
-    public  function booking()
+    public  function booking($id)
     {
-        return view('pages.booking');
+        $cars= DB::table('cars')
+        ->where('id',$id)->get();
+
+        return view('pages.booking',['cars'=>$cars]);
     }
 }

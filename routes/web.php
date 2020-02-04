@@ -35,7 +35,7 @@ Route::get('signup', 'LoginController@signup')->name('signup');
 */
 Route::group(['middleware' => ['auth','checkRole:admin']],function(){
     Route::get('/admin/index', 'AdminsController@index')->name('dashboard');
-    Route::get('/admin/reservations', 'reservationsController@index');
+    Route::get('/admin/reservations', 'ReservationsController@index');
     // Route::resource('admin', 'AdminsController');
     
     // Route::get('admin/cars', 'CarsController@index')->name('cars');
@@ -55,7 +55,7 @@ Route::group(['middleware' => ['auth','checkRole:admin']],function(){
 */
 
 Route::group(['middleware' => ['auth']],function(){
-    Route::get('booking', 'PagesController@booking')->name('booking');
+    Route::get('booking/{id}', 'PagesController@booking')->name('booking');
 
  });
 
@@ -81,3 +81,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 */
+
+
+Route::post('/finish', function(){
+    return redirect()->route('welcome');
+})->name('booking.finish');
+ 
+Route::post('/booking/store', 'BookingsController@submitBooking')->name('booking.store');
+Route::post('/notification/handler', 'BookingsController@notificationHandler')->name('notification.handler');

@@ -31,25 +31,50 @@
                                         <thead>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Image</th>
+                                                <th>Nama</th>
+                                                <th>Telephone</th>
                                                 <th>Tipe</th>
-                                                <th>Plate</th>
-                                                <th>Tahun</th>
-                                                <th>Harga/Hari</th>
+                                                <th>Tanggal Sewa</th>
+                                                <th>Tanggal Kembali</th>
+                                                <th>Total Harga</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        
+                                        @foreach ($booking as $data)
+                                        <tr>
+                                            <td class="align-middle">{{ $loop->iteration}}</td>
+                                            <td  class="align-middle">{{$data->name}}</td>
+                                            <td  class="align-middle">{{$data->tlp}}</td>
+                                            <td  class="align-middle">{{$data->tipe}}</td>
+                                            <td  class="align-middle">{{$data->tgl_sewa}}</td>
+                                            <td  class="align-middle">{{$data->tgl_kembali}}</td>
+                                            <td  class="align-middle">{{$data->total}}</td>
+                                            <td class="align-middle">
+                                                <i class="feather icon-eye fa-lg" data-toggle="tooltip" data-placement="left" title="View Detail"> </i><br>
+                                                <a href="cars/{{ $data->id }}/edit" >
+                                                    <i class="feather icon-edit fa-lg" data-toggle="tooltip" data-placement="left" title="Edit"> </i><br>
+                                                </a>
+                                                <form action="booking/{{$data->id }}" method="POST">
+                                                    @method('delete')
+                                                    @csrf
+                                                    <button type="submit" onclick="return confirm('Apakah kamu yakin ingin menghapus mobil {{ $data->tipe }}');" style="border: none; background: none;">
+                                                        <i class="feather icon-trash-2 fa-lg" data-toggle="tooltip" data-placement="left" title="Delete"> </i>
+                                                    </button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        @endforeach
                                         </tbody>
                                         <tfoot>
                                             <tr>
                                                 <th>No</th>
-                                                <th>Image</th>
+                                                <th>Nama</th>
+                                                <th>Telephone</th>
                                                 <th>Tipe</th>
-                                                <th>Plate</th>
-                                                <th>Tahun</th>
-                                                <th>Harga/Hari</th>
+                                                <th>Tanggal Sewa</th>
+                                                <th>Tanggal Kembali</th>
+                                                <th>Total Harga</th>
                                                 <th>Action</th>
                                             </tr>
                                         </tfoot>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ReservationsController extends Controller
 {
@@ -13,7 +14,11 @@ class ReservationsController extends Controller
      */
     public function index()
     {
-        return view('admins.reservation.index');
+        $booking= DB::table('bookings')
+        ->join('users', 'users.id', '=', 'bookings.id_users')
+        ->join('cars', 'cars.id', '=', 'bookings.id_cars')
+        ->get();
+        return view('admins.reservation.index',['booking'=>$booking]);
     }
 
     /**

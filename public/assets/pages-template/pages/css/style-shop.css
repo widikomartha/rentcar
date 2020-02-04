@@ -647,6 +647,8 @@ Header and header elements
 }
 .radio-list {
 	margin: 0 0 10px -2px;
+	font-weight: 900;
+	font-size: 16px;
 }
 .radio-list > label {
     display: block;
